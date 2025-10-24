@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng điều khiển</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Chào <span id="username"></span>!</h2>
+
+        <h3>➕ Thêm sản phẩm mới</h3>
+        <input type="text" id="productName" placeholder="Tên sản phẩm">
+        <input type="number" id="productPrice" placeholder="Giá sản phẩm">
+        <button id="addProductBtn">Thêm sản phẩm</button>
+
+        <h3>📦 Danh sách sản phẩm</h3>
+        <ul id="productList"></ul>
+
+        <h3>🛒 Đặt hàng</h3>
+        <select id="orderSelect"></select>
+        <button id="orderBtn">Đặt hàng</button>
+
+        <p><a href="/">⬅ Về trang chủ</a></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Bút bi",
+        "price": 5000
+    },
+    {
+        "id": 2,
+        "name": "Vở",
+        "price": 12000
+    },
+    {
+        "id": 1761161444955,
+        "name": "Bút chì",
+        "price": 3000
+    },
+    {
+        "id": 4,
+        "name": "Sách tham khảo",
+        "price": "40000"
+    }
+]

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Đăng ký</h2>
+        <form id="registerForm">
+            <input type="text" id="username" placeholder="Tên đăng nhập" required />
+            <input type="password" id="password" placeholder="Mật khẩu" required />
+            <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu" required />
+            <button type="submit">Đăng ký</button>
+        </form>
+        <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+  const form = document.getElementById("registerForm");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    const res = await fetch("/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      alert("Đăng ký thành công! Mời bạn đăng nhập.");
+      window.location.href = "login.html";
+    } else {
+      alert(data.message);
+    }
+  });
+</script>
+
+</body>
+
+</html>

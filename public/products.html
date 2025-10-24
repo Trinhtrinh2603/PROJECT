@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sản phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2,
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #2d89ef;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #1b5fbd;
+        }
+
+        .logout {
+            background-color: #dc3545;
+        }
+
+        .logout:hover {
+            background-color: #b52a37;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px;
+            background: #f9fafc;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .add-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .add-btn:hover {
+            background: #1e7e34;
+        }
+
+        .remove-btn {
+            background: #dc3545;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .remove-btn:hover {
+            background: #b52a37;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Quản lý sản phẩm</h2>
+        <p id="welcome"></p>
+
+        <form id="productForm">
+            <input type="text" id="name" placeholder="Tên sản phẩm" required />
+            <input type="number" id="price" placeholder="Giá sản phẩm" required />
+            <button type="submit">Thêm sản phẩm</button>
+        </form>
+
+        <h3>Danh sách sản phẩm</h3>
+        <ul id="productList"></ul>
+
+        <hr>
+        <button id="viewCartBtn">🛒 Xem giỏ hàng</button>
+        <div id="cartSection" style="display:none; margin-top:20px;">
+            <h3>Giỏ hàng của bạn</h3>
+            <ul id="cartList"></ul>
+            <button id="orderBtn">Đặt hàng</button>
+        </div>
+
+        <button class="logout" id="logoutBtn">Đăng xuất</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+<p><a href="http://localhost:3000/orders" target="_blank">Xem danh sách đơn hàng (JSON)</a></p>
+
+</html>
