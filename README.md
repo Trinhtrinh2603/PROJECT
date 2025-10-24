@@ -18,5 +18,10 @@ Người dùng có thể:
 - **Postman** – dùng để kiểm thử API.
 - **HTML/CSS/JS** – giao diện hiển thị sản phẩm và đặt hàng trên local.
 
-![alt text](1.PNG)
-![alt text](2.PNG) ![alt text](3.PNG) ![alt text](4.PNG) ![alt text](5.PNG) ![alt text](6.PNG) ![alt text](7.PNG)
+![alt text](img/1.PNG)
+![alt text](img/2.PNG)
+![alt text](img/3.PNG)
+![alt text](img/4.PNG)
+![alt text](img/5.PNG)
+![alt text](img/6.PNG)
+![alt text](img/7.PNG)
